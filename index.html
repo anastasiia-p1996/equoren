@@ -49,9 +49,8 @@
     <nav aria-label="Primary" style="display: flex; align-items: center; gap: clamp(18px, 2.4vw, 34px);">
       <a href="#services" style="display: none; font-size: 14.5px; color: #55524c; letter-spacing: 0.01em;" style-hover="color: #1a1917;" data-navlink="1">Services</a>
       <a href="#process" style="display: none; font-size: 14.5px; color: #55524c;" style-hover="color: #1a1917;" data-navlink="1">How we work</a>
-      <a href="#clients" style="display: none; font-size: 14.5px; color: #55524c;" style-hover="color: #1a1917;" data-navlink="1">Who we help</a>
       <a href="#about" style="display: none; font-size: 14.5px; color: #55524c;" style-hover="color: #1a1917;" data-navlink="1">About</a>
-      <a href="#contact" data-navcta="1" style="display: none; font-size: 14.5px; color: #faf8f5; background: #1a1917; padding: 10px 20px; border-radius: 999px;" style-hover="background: #7f6130; color: #faf8f5;">Let's talk</a>
+      <a href="mailto:hello@equoren.com" data-navcta="1" style="display: none; font-size: 14.5px; color: #faf8f5; background: #1a1917; padding: 10px 20px; border-radius: 999px; white-space: nowrap;" style-hover="background: #7f6130; color: #faf8f5;">Tell us what isn't working</a>
       <button type="button" onClick="{{ toggleNav }}" aria-expanded="{{ navOpenStr }}" aria-label="Menu" data-navbtn="1" style="display: inline-flex; flex-direction: column; gap: 5px; background: none; border: 0; padding: 10px; margin-right: -10px; cursor: pointer;">
         <span style="display: block; width: 22px; height: 1.5px; background: #1a1917;"></span>
         <span style="display: block; width: 22px; height: 1.5px; background: #1a1917;"></span>
@@ -67,7 +66,7 @@
       <a href="#process" onClick="{{ closeNav }}" style="font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-size: 30px; color: #1a1917; padding: 14px 0; border-bottom: 1px solid #e6dfd4;">How we work</a>
       <a href="#clients" onClick="{{ closeNav }}" style="font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-size: 30px; color: #1a1917; padding: 14px 0; border-bottom: 1px solid #e6dfd4;">Who we help</a>
       <a href="#about" onClick="{{ closeNav }}" style="font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-size: 30px; color: #1a1917; padding: 14px 0; border-bottom: 1px solid #e6dfd4;">About</a>
-      <a href="#contact" onClick="{{ closeNav }}" style="margin-top: 28px; align-self: flex-start; font-size: 16px; color: #faf8f5; background: #1a1917; padding: 15px 30px; border-radius: 999px;">Let's talk</a>
+      <a href="mailto:hello@equoren.com" onClick="{{ closeNav }}" style="margin-top: 28px; align-self: flex-start; font-size: 16px; color: #faf8f5; background: #1a1917; padding: 15px 30px; border-radius: 999px;">Tell us what isn't working</a>
     </nav>
   </div>
 </sc-if>
@@ -81,9 +80,9 @@
   </p>
   <h1 data-reveal="1" style="margin: 0; font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-weight: 300; font-size: clamp(2.9rem, 8.2vw, 6.4rem); line-height: 0.98; letter-spacing: -0.025em; max-width: 15ch; text-wrap: balance;">Better ways<br />of working.</h1>
   <div style="display: grid; grid-template-columns: 1fr; gap: clamp(30px, 3.5vw, 44px); margin-top: clamp(36px, 5vw, 64px); justify-items: start;">
-    <p data-reveal="1" style="margin: 0; font-size: clamp(1.05rem, 1.5vw, 1.3rem); line-height: 1.55; color: #55524c; max-width: 46ch; text-wrap: pretty;">Equoren helps growing businesses simplify operations, improve workflows and automate repetitive work.</p>
+    <p data-reveal="1" style="margin: 0; font-size: clamp(1.05rem, 1.5vw, 1.3rem); line-height: 1.55; color: #55524c; max-width: 46ch; text-wrap: pretty;">Equoren helps growing businesses remove operational friction — simplifying workflows, connecting the tools they already use and automating work that shouldn't need a person.</p>
     <div data-reveal="1" style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px;">
-      <a href="#contact" style="font-size: 15.5px; color: #faf8f5; background: #1a1917; padding: 16px 34px; border-radius: 999px; transition: background 220ms ease, transform 220ms ease;" style-hover="background: #7f6130; transform: translateY(-1px);">Let's talk</a>
+      <a href="mailto:hello@equoren.com" style="font-size: 15.5px; color: #faf8f5; background: #1a1917; padding: 16px 34px; border-radius: 999px; transition: background 220ms ease, transform 220ms ease;" style-hover="background: #7f6130; transform: translateY(-1px);">Tell us what isn't working</a>
       <a href="#process" style="font-size: 15.5px; color: #1a1917; border-bottom: 1px solid #c9bda8; padding-bottom: 3px; transition: border-color 200ms ease;" style-hover="border-color: #7f6130; color: #7f6130;">See how we work</a>
     </div>
   </div>
@@ -94,16 +93,52 @@
     <div style="display: grid; grid-template-columns: 1fr; gap: clamp(40px, 6vw, 90px);" data-two-col="1">
       <div>
         <h2 data-reveal="1" style="margin: 0; font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-weight: 300; font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.08; letter-spacing: -0.02em; max-width: 22ch; text-wrap: balance;">Your business shouldn't depend on workarounds.</h2>
-        <p data-reveal="1" style="margin: 26px 0 0; font-size: 1.02rem; line-height: 1.6; color: #55524c; max-width: 38ch;">Most operational friction isn't caused by a lack of effort. It builds up quietly, one workaround at a time.</p>
+        <p data-reveal="1" style="margin: 18px 0 0; font-size: 12.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #b79a63;">Could this be your problem?</p>
+        <p data-reveal="1" style="margin: 26px 0 0; font-size: 1.02rem; line-height: 1.6; color: #55524c; max-width: 38ch;">Operational friction is rarely caused by a lack of effort. It builds up quietly, one workaround at a time, until the way work gets done no longer matches the size of the business.</p>
       </div>
-      <ul data-reveal="1" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 0;">
-        <li style="display: flex; gap: 18px; padding: 20px 0; border-top: 1px solid #e6dfd4; font-size: 1.02rem; line-height: 1.5; color: #38352f;"><span style="color: #b79a63; font-size: 13px; padding-top: 4px;">01</span>Repetitive manual tasks that nobody has time to fix</li>
-        <li style="display: flex; gap: 18px; padding: 20px 0; border-top: 1px solid #e6dfd4; font-size: 1.02rem; line-height: 1.5; color: #38352f;"><span style="color: #b79a63; font-size: 13px; padding-top: 4px;">02</span>Information scattered across too many tools</li>
-        <li style="display: flex; gap: 18px; padding: 20px 0; border-top: 1px solid #e6dfd4; font-size: 1.02rem; line-height: 1.5; color: #38352f;"><span style="color: #b79a63; font-size: 13px; padding-top: 4px;">03</span>Processes that live only in people's heads</li>
-        <li style="display: flex; gap: 18px; padding: 20px 0; border-top: 1px solid #e6dfd4; font-size: 1.02rem; line-height: 1.5; color: #38352f;"><span style="color: #b79a63; font-size: 13px; padding-top: 4px;">04</span>Unclear ownership of who does what, and when</li>
-        <li style="display: flex; gap: 18px; padding: 20px 0; border-top: 1px solid #e6dfd4; font-size: 1.02rem; line-height: 1.5; color: #38352f;"><span style="color: #b79a63; font-size: 13px; padding-top: 4px;">05</span>Reporting that takes far more effort than it should</li>
-        <li style="display: flex; gap: 18px; padding: 20px 0; border-top: 1px solid #e6dfd4; border-bottom: 1px solid #e6dfd4; font-size: 1.02rem; line-height: 1.5; color: #38352f;"><span style="color: #b79a63; font-size: 13px; padding-top: 4px;">06</span>Workflows that worked at five people and break at twenty</li>
-      </ul>
+      <div data-reveal="1" style="display: grid; gap: 0;">
+        <div style="display: grid; gap: 8px; padding: 22px 0; border-top: 1px solid #e6dfd4;">
+          <p style="margin: 0; font-size: 1.05rem; line-height: 1.5; color: #1a1917; max-width: 40ch; text-wrap: pretty;">Your team spends hours every week preparing reports.</p>
+          <p style="margin: 0; font-size: 0.98rem; line-height: 1.5; color: #7f6130;">We streamline the workflow.</p>
+        </div>
+        <div style="display: grid; gap: 8px; padding: 22px 0; border-top: 1px solid #e6dfd4;">
+          <p style="margin: 0; font-size: 1.05rem; line-height: 1.5; color: #1a1917; max-width: 40ch; text-wrap: pretty;">People copy the same information between several systems.</p>
+          <p style="margin: 0; font-size: 0.98rem; line-height: 1.5; color: #7f6130;">We connect the process.</p>
+        </div>
+        <div style="display: grid; gap: 8px; padding: 22px 0; border-top: 1px solid #e6dfd4;">
+          <p style="margin: 0; font-size: 1.05rem; line-height: 1.5; color: #1a1917; max-width: 40ch; text-wrap: pretty;">A process depends on one person knowing how everything works.</p>
+          <p style="margin: 0; font-size: 0.98rem; line-height: 1.5; color: #7f6130;">We document and systematise it.</p>
+        </div>
+        <div style="display: grid; gap: 8px; padding: 22px 0; border-top: 1px solid #e6dfd4;">
+          <p style="margin: 0; font-size: 1.05rem; line-height: 1.5; color: #1a1917; max-width: 40ch; text-wrap: pretty;">Nobody is quite sure who owns what.</p>
+          <p style="margin: 0; font-size: 0.98rem; line-height: 1.5; color: #7f6130;">We clarify the workflow.</p>
+        </div>
+        <div style="display: grid; gap: 8px; padding: 22px 0; border-top: 1px solid #e6dfd4; border-bottom: 1px solid #e6dfd4;">
+          <p style="margin: 0; font-size: 1.05rem; line-height: 1.5; color: #1a1917; max-width: 40ch; text-wrap: pretty;">Workflows that worked at five people break at twenty.</p>
+          <p style="margin: 0; font-size: 0.98rem; line-height: 1.5; color: #7f6130;">We redesign them to scale.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="clients" style="border-top: 1px solid #e6dfd4;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 130px) clamp(20px, 5vw, 64px);">
+    <div style="display: grid; grid-template-columns: 1fr; gap: clamp(36px, 5vw, 80px);" data-two-col="1">
+      <div>
+        <h2 data-reveal="1" style="margin: 0; font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-weight: 300; font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.08; letter-spacing: -0.02em; max-width: 20ch; text-wrap: balance;">Built for businesses that have outgrown manual work.</h2>
+      </div>
+      <div data-reveal="1">
+        <p style="margin: 0 0 30px; font-size: 1.02rem; line-height: 1.6; color: #55524c; max-width: 42ch; text-wrap: pretty;">For growing businesses where spreadsheets, manual processes and disconnected tools are starting to slow things down. We work across industries — what these businesses have in common is operational complexity that grew faster than their systems.</p>
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px;">
+          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Growing service businesses</li>
+          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Professional services</li>
+          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Agencies</li>
+          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Operations-heavy teams</li>
+          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Founder-led businesses</li>
+          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Businesses using multiple disconnected tools</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -127,8 +162,8 @@
       </article>
       <article data-reveal="1" style="background: #faf8f5; padding: clamp(28px, 3.4vw, 46px); transition: background 260ms ease;" style-hover="background: #f5f1ea;">
         <p style="margin: 0 0 22px; font-size: 12.5px; letter-spacing: 0.16em; color: #b79a63;">C</p>
-        <h3 style="margin: 0 0 14px; font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-weight: 400; font-size: clamp(1.35rem, 2vw, 1.75rem); letter-spacing: -0.01em;">AI-Assisted Operations</h3>
-        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 36ch; text-wrap: pretty;">Use AI where it creates practical value — from information handling to internal workflows.</p>
+        <h3 style="margin: 0 0 14px; font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-weight: 400; font-size: clamp(1.35rem, 2vw, 1.75rem); letter-spacing: -0.01em;">Intelligent Operations</h3>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 36ch; text-wrap: pretty;">Put AI to work only where it earns its place — handling information, drafting and routine steps inside your existing workflows.</p>
       </article>
       <article data-reveal="1" style="background: #faf8f5; padding: clamp(28px, 3.4vw, 46px); transition: background 260ms ease;" style-hover="background: #f5f1ea;">
         <p style="margin: 0 0 22px; font-size: 12.5px; letter-spacing: 0.16em; color: #b79a63;">D</p>
@@ -156,37 +191,42 @@
       <li data-reveal="1" style="padding: 30px 0 30px; border-top: 1px solid #d8cfc0;">
         <p style="margin: 0 0 18px; font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-size: 2.4rem; font-weight: 300; color: #b79a63; line-height: 1;">03</p>
         <h3 style="margin: 0 0 10px; font-size: 1.05rem; font-weight: 500; letter-spacing: 0.01em;">Automate</h3>
-        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 30ch; text-wrap: pretty;">We implement practical improvements using the right tools.</p>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 30ch; text-wrap: pretty;">We automate the repetitive parts, using tools that make sense for your business.</p>
       </li>
       <li data-reveal="1" style="padding: 30px 0 30px; border-top: 1px solid #d8cfc0;">
         <p style="margin: 0 0 18px; font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-size: 2.4rem; font-weight: 300; color: #b79a63; line-height: 1;">04</p>
         <h3 style="margin: 0 0 10px; font-size: 1.05rem; font-weight: 500; letter-spacing: 0.01em;">Improve</h3>
-        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 30ch; text-wrap: pretty;">We measure, refine and build on what works.</p>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 30ch; text-wrap: pretty;">We measure what changed, then identify the next improvement.</p>
       </li>
     </ol>
   </div>
 </section>
 
-<section id="clients" style="border-top: 1px solid #e6dfd4;">
+<section style="border-top: 1px solid #e6dfd4;">
   <div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 130px) clamp(20px, 5vw, 64px);">
-    <div style="display: grid; grid-template-columns: 1fr; gap: clamp(36px, 5vw, 80px);" data-two-col="1">
-      <div>
-        <h2 data-reveal="1" style="margin: 0; font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-weight: 300; font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.08; letter-spacing: -0.02em; max-width: 20ch; text-wrap: balance;">Built for businesses that have outgrown manual work.</h2>
-      </div>
-      <div data-reveal="1">
-        <p style="margin: 0 0 30px; font-size: 1.02rem; line-height: 1.6; color: #55524c; max-width: 42ch; text-wrap: pretty;">We work across industries. What our clients have in common is operational complexity that has grown faster than their systems.</p>
-        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px;">
-          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Growing service businesses</li>
-          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Professional services</li>
-          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Agencies</li>
-          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Operations-heavy SMEs</li>
-          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Founder-led businesses</li>
-          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Teams using multiple disconnected tools</li>
-        </ul>
-      </div>
+    <div data-reveal="1" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: clamp(36px, 4.5vw, 60px);">
+      <h2 style="margin: 0; font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-weight: 300; font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.1; letter-spacing: -0.02em; max-width: 24ch; text-wrap: balance;">One workflow can make a difference.</h2>
+      <p style="margin: 0; font-size: 12.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #8b8781;">Illustrative example</p>
     </div>
+    <div style="display: grid; grid-template-columns: 1fr; gap: 1px; background: #e6dfd4; border: 1px solid #e6dfd4;" data-cards="1">
+      <article data-reveal="1" style="background: #faf8f5; padding: clamp(28px, 3.4vw, 46px);">
+        <p style="margin: 0 0 20px; font-size: 12.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #b79a63;">Before</p>
+        <p style="margin: 0; font-size: 1.02rem; line-height: 1.6; color: #38352f; max-width: 34ch; text-wrap: pretty;">Every Monday, your team spends hours collecting information from several tools and preparing a report by hand.</p>
+      </article>
+      <article data-reveal="1" style="background: #faf8f5; padding: clamp(28px, 3.4vw, 46px);">
+        <p style="margin: 0 0 20px; font-size: 12.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #b79a63;">After</p>
+        <p style="margin: 0; font-size: 1.02rem; line-height: 1.6; color: #38352f; max-width: 34ch; text-wrap: pretty;">A single workflow gathers the information, applies the checks you rely on and prepares the report on its own.</p>
+      </article>
+    </div>
+    <div data-reveal="1" style="margin-top: clamp(28px, 3vw, 40px); display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px;">
+      <p style="margin: 0; font-size: 12.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #8b8781;">Outcome</p>
+      <p style="margin: 0; font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-weight: 300; font-size: clamp(1.3rem, 2.4vw, 1.8rem); line-height: 1.3; letter-spacing: -0.015em; color: #1a1917;">Less manual work. Fewer handoffs. Better visibility.</p>
+    </div>
+    <p data-reveal="1" style="margin: 26px 0 0; font-size: 13.5px; line-height: 1.55; color: #a8a39b; max-width: 52ch;">An illustration of the kind of change we work on, not a client case study — Equoren is at an early stage and has none to show yet.</p>
   </div>
 </section>
+
+
 
 <section style="border-top: 1px solid #e6dfd4;">
   <div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 130px) clamp(20px, 5vw, 64px);">
@@ -205,7 +245,7 @@
         <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 32ch; text-wrap: pretty;">Your existing processes and tools are the starting point.</p>
       </div>
       <div data-reveal="1">
-        <h3 style="margin: 0 0 12px; font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-weight: 400; font-style: italic; font-size: clamp(1.3rem, 2vw, 1.6rem); letter-spacing: -0.01em;">Designed to scale.</h3>
+        <h3 style="margin: 0 0 12px; font-family: Newsreader, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif; font-weight: 400; font-style: italic; font-size: clamp(1.3rem, 2vw, 1.6rem); letter-spacing: -0.01em;">Designed to evolve.</h3>
         <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 32ch; text-wrap: pretty;">We build systems that can evolve as your business grows.</p>
       </div>
     </div>
@@ -220,7 +260,7 @@
     </div>
     <div>
       <p style="margin: 0 0 32px; font-size: clamp(1.02rem, 1.4vw, 1.15rem); line-height: 1.62; color: #c8c3ba; max-width: 46ch; text-wrap: pretty;">You don't need a major transformation project. We can start with one workflow, one bottleneck or one repetitive task and see what can be improved.</p>
-      <a href="#contact" style="display: inline-block; font-size: 15.5px; color: #1a1917; background: #f2efea; padding: 16px 34px; border-radius: 999px; transition: background 220ms ease, transform 220ms ease;" style-hover="background: #b79a63; transform: translateY(-1px);">Talk to us about a workflow</a>
+      <a href="mailto:hello@equoren.com" style="display: inline-block; font-size: 15.5px; color: #1a1917; background: #f2efea; padding: 16px 34px; border-radius: 999px; transition: background 220ms ease, transform 220ms ease;" style-hover="background: #b79a63; transform: translateY(-1px);">Tell us what isn't working</a>
     </div>
   </div>
 </section>
