@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Equoren — Operations &amp; Automation</title>
+<meta name="description" content="Equoren helps growing businesses simplify operations, improve workflows and automate repetitive work." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#faf8f5" />
+<link rel="canonical" href="https://equoren.com/" />
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Equoren" />
+<meta property="og:url" content="https://equoren.com/" />
+<meta property="og:title" content="Equoren — Operations &amp; Automation" />
+<meta property="og:description" content="Equoren helps growing businesses simplify operations, improve workflows and automate repetitive work." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Equoren — Operations &amp; Automation" />
+<meta name="twitter:description" content="Equoren helps growing businesses simplify operations, improve workflows and automate repetitive work." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #faf8f5; color: #1a1917; font-family: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  a { color: #7f6130; text-decoration: none; }
+  a:hover { color: #1a1917; }
+  ::selection { background: #e9dfcb; }
+  :focus-visible { outline: 2px solid #7f6130; outline-offset: 3px; }
+  input, textarea, button, select { font: inherit; color: inherit; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</helmet>
+
+<div style="max-width: 100%; overflow-x: hidden;">
+
+<a href="#main" style="position: absolute; left: -9999px; top: 0; background: #1a1917; color: #faf8f5; padding: 12px 18px; z-index: 200; font-size: 14px;" style-focus="left: 12px; top: 12px;">Skip to content</a>
+
+<header style="position: sticky; top: 0; z-index: 100; background: rgba(250, 248, 245, 0.86); backdrop-filter: saturate(140%) blur(12px); border-bottom: 1px solid #e6dfd4;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px); height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+    <a href="#top" aria-label="Equoren, home" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.22em; color: #1a1917; white-space: nowrap;">EQUOREN</a>
+    <nav aria-label="Primary" style="display: flex; align-items: center; gap: clamp(18px, 2.4vw, 34px);">
+      <a href="#services" style="display: none; font-size: 14.5px; color: #55524c; letter-spacing: 0.01em;" style-hover="color: #1a1917;" data-navlink="1">Services</a>
+      <a href="#process" style="display: none; font-size: 14.5px; color: #55524c;" style-hover="color: #1a1917;" data-navlink="1">How we work</a>
+      <a href="#clients" style="display: none; font-size: 14.5px; color: #55524c;" style-hover="color: #1a1917;" data-navlink="1">Who we help</a>
+      <a href="#about" style="display: none; font-size: 14.5px; color: #55524c;" style-hover="color: #1a1917;" data-navlink="1">About</a>
+      <a href="#contact" data-navcta="1" style="display: none; font-size: 14.5px; color: #faf8f5; background: #1a1917; padding: 10px 20px; border-radius: 999px;" style-hover="background: #7f6130; color: #faf8f5;">Let's talk</a>
+      <button type="button" onClick="{{ toggleNav }}" aria-expanded="{{ navOpenStr }}" aria-label="Menu" data-navbtn="1" style="display: inline-flex; flex-direction: column; gap: 5px; background: none; border: 0; padding: 10px; margin-right: -10px; cursor: pointer;">
+        <span style="display: block; width: 22px; height: 1.5px; background: #1a1917;"></span>
+        <span style="display: block; width: 22px; height: 1.5px; background: #1a1917;"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position: fixed; inset: 74px 0 0 0; z-index: 99; background: #faf8f5; padding: 40px clamp(20px, 6vw, 40px);">
+    <nav aria-label="Mobile" style="display: flex; flex-direction: column; gap: 4px;">
+      <a href="#services" onClick="{{ closeNav }}" style="font-family: Newsreader, Georgia, serif; font-size: 30px; color: #1a1917; padding: 14px 0; border-bottom: 1px solid #e6dfd4;">Services</a>
+      <a href="#process" onClick="{{ closeNav }}" style="font-family: Newsreader, Georgia, serif; font-size: 30px; color: #1a1917; padding: 14px 0; border-bottom: 1px solid #e6dfd4;">How we work</a>
+      <a href="#clients" onClick="{{ closeNav }}" style="font-family: Newsreader, Georgia, serif; font-size: 30px; color: #1a1917; padding: 14px 0; border-bottom: 1px solid #e6dfd4;">Who we help</a>
+      <a href="#about" onClick="{{ closeNav }}" style="font-family: Newsreader, Georgia, serif; font-size: 30px; color: #1a1917; padding: 14px 0; border-bottom: 1px solid #e6dfd4;">About</a>
+      <a href="#contact" onClick="{{ closeNav }}" style="margin-top: 28px; align-self: flex-start; font-size: 16px; color: #faf8f5; background: #1a1917; padding: 15px 30px; border-radius: 999px;">Let's talk</a>
+    </nav>
+  </div>
+</sc-if>
+
+<main id="main">
+
+<section id="top" style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 11vw, 150px) clamp(20px, 5vw, 64px) clamp(64px, 8vw, 110px);">
+  <p data-reveal="1" style="display: flex; align-items: center; gap: 14px; margin: 0 0 clamp(32px, 5vw, 54px); font-size: 12.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #7f6130;">
+    <span style="display: inline-block; width: 28px; height: 1px; background: #b79a63;"></span>
+    Operations &amp; Automation
+  </p>
+  <h1 data-reveal="1" style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(2.9rem, 8.2vw, 6.4rem); line-height: 0.98; letter-spacing: -0.025em; max-width: 15ch; text-wrap: balance;">Better ways<br />of working.</h1>
+  <div style="display: grid; grid-template-columns: 1fr; gap: clamp(28px, 4vw, 56px); margin-top: clamp(36px, 5vw, 64px); align-items: end;" data-hero-grid="1">
+    <p data-reveal="1" style="margin: 0; font-size: clamp(1.05rem, 1.5vw, 1.3rem); line-height: 1.55; color: #55524c; max-width: 46ch; text-wrap: pretty;">Equoren helps growing businesses simplify operations, improve workflows and automate repetitive work.</p>
+    <div data-reveal="1" style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px;">
+      <a href="#contact" style="font-size: 15.5px; color: #faf8f5; background: #1a1917; padding: 16px 34px; border-radius: 999px; transition: background 220ms ease, transform 220ms ease;" style-hover="background: #7f6130; transform: translateY(-1px);">Let's talk</a>
+      <a href="#process" style="font-size: 15.5px; color: #1a1917; border-bottom: 1px solid #c9bda8; padding-bottom: 3px; transition: border-color 200ms ease;" style-hover="border-color: #7f6130; color: #7f6130;">See how we work</a>
+    </div>
+  </div>
+</section>
+
+<section style="border-top: 1px solid #e6dfd4;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 130px) clamp(20px, 5vw, 64px);">
+    <div style="display: grid; grid-template-columns: 1fr; gap: clamp(40px, 6vw, 90px);" data-two-col="1">
+      <div>
+        <h2 data-reveal="1" style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.08; letter-spacing: -0.02em; max-width: 22ch; text-wrap: balance;">Your business shouldn't depend on workarounds.</h2>
+        <p data-reveal="1" style="margin: 26px 0 0; font-size: 1.02rem; line-height: 1.6; color: #55524c; max-width: 38ch;">Most operational friction isn't caused by a lack of effort. It builds up quietly, one workaround at a time.</p>
+      </div>
+      <ul data-reveal="1" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 0;">
+        <li style="display: flex; gap: 18px; padding: 20px 0; border-top: 1px solid #e6dfd4; font-size: 1.02rem; line-height: 1.5; color: #38352f;"><span style="color: #b79a63; font-size: 13px; padding-top: 4px;">01</span>Repetitive manual tasks that nobody has time to fix</li>
+        <li style="display: flex; gap: 18px; padding: 20px 0; border-top: 1px solid #e6dfd4; font-size: 1.02rem; line-height: 1.5; color: #38352f;"><span style="color: #b79a63; font-size: 13px; padding-top: 4px;">02</span>Information scattered across too many tools</li>
+        <li style="display: flex; gap: 18px; padding: 20px 0; border-top: 1px solid #e6dfd4; font-size: 1.02rem; line-height: 1.5; color: #38352f;"><span style="color: #b79a63; font-size: 13px; padding-top: 4px;">03</span>Processes that live only in people's heads</li>
+        <li style="display: flex; gap: 18px; padding: 20px 0; border-top: 1px solid #e6dfd4; font-size: 1.02rem; line-height: 1.5; color: #38352f;"><span style="color: #b79a63; font-size: 13px; padding-top: 4px;">04</span>Unclear ownership of who does what, and when</li>
+        <li style="display: flex; gap: 18px; padding: 20px 0; border-top: 1px solid #e6dfd4; font-size: 1.02rem; line-height: 1.5; color: #38352f;"><span style="color: #b79a63; font-size: 13px; padding-top: 4px;">05</span>Reporting that takes far more effort than it should</li>
+        <li style="display: flex; gap: 18px; padding: 20px 0; border-top: 1px solid #e6dfd4; border-bottom: 1px solid #e6dfd4; font-size: 1.02rem; line-height: 1.5; color: #38352f;"><span style="color: #b79a63; font-size: 13px; padding-top: 4px;">06</span>Workflows that worked at five people and break at twenty</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="border-top: 1px solid #e6dfd4;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 130px) clamp(20px, 5vw, 64px);">
+    <div data-reveal="1" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: clamp(40px, 5vw, 68px);">
+      <h2 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.1; letter-spacing: -0.02em;">What we do</h2>
+      <p style="margin: 0; font-size: 12.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #8b8781;">Four service areas</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr; gap: 1px; background: #e6dfd4; border: 1px solid #e6dfd4;" data-cards="1">
+      <article data-reveal="1" style="background: #faf8f5; padding: clamp(28px, 3.4vw, 46px); transition: background 260ms ease;" style-hover="background: #f5f1ea;">
+        <p style="margin: 0 0 22px; font-size: 12.5px; letter-spacing: 0.16em; color: #b79a63;">A</p>
+        <h3 style="margin: 0 0 14px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: clamp(1.35rem, 2vw, 1.75rem); letter-spacing: -0.01em;">Process Design</h3>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 34ch; text-wrap: pretty;">Map, simplify and improve the way work gets done.</p>
+      </article>
+      <article data-reveal="1" style="background: #faf8f5; padding: clamp(28px, 3.4vw, 46px); transition: background 260ms ease;" style-hover="background: #f5f1ea;">
+        <p style="margin: 0 0 22px; font-size: 12.5px; letter-spacing: 0.16em; color: #b79a63;">B</p>
+        <h3 style="margin: 0 0 14px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: clamp(1.35rem, 2vw, 1.75rem); letter-spacing: -0.01em;">Workflow Automation</h3>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 34ch; text-wrap: pretty;">Remove repetitive manual steps and connect the tools your team already uses.</p>
+      </article>
+      <article data-reveal="1" style="background: #faf8f5; padding: clamp(28px, 3.4vw, 46px); transition: background 260ms ease;" style-hover="background: #f5f1ea;">
+        <p style="margin: 0 0 22px; font-size: 12.5px; letter-spacing: 0.16em; color: #b79a63;">C</p>
+        <h3 style="margin: 0 0 14px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: clamp(1.35rem, 2vw, 1.75rem); letter-spacing: -0.01em;">AI-Assisted Operations</h3>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 36ch; text-wrap: pretty;">Use AI where it creates practical value — from information handling to internal workflows.</p>
+      </article>
+      <article data-reveal="1" style="background: #faf8f5; padding: clamp(28px, 3.4vw, 46px); transition: background 260ms ease;" style-hover="background: #f5f1ea;">
+        <p style="margin: 0 0 22px; font-size: 12.5px; letter-spacing: 0.16em; color: #b79a63;">D</p>
+        <h3 style="margin: 0 0 14px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: clamp(1.35rem, 2vw, 1.75rem); letter-spacing: -0.01em;">Reporting &amp; Visibility</h3>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 36ch; text-wrap: pretty;">Turn scattered operational data into clear, useful management visibility.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="process" style="border-top: 1px solid #e6dfd4;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 130px) clamp(20px, 5vw, 64px);">
+    <h2 data-reveal="1" style="margin: 0 0 clamp(40px, 5vw, 68px); font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.1; letter-spacing: -0.02em;">How we work</h2>
+    <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 0;" data-steps="1">
+      <li data-reveal="1" style="padding: 30px 0 30px; border-top: 1px solid #d8cfc0;">
+        <p style="margin: 0 0 18px; font-family: Newsreader, Georgia, serif; font-size: 2.4rem; font-weight: 300; color: #b79a63; line-height: 1;">01</p>
+        <h3 style="margin: 0 0 10px; font-size: 1.05rem; font-weight: 500; letter-spacing: 0.01em;">Understand</h3>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 30ch; text-wrap: pretty;">We learn how your business actually works.</p>
+      </li>
+      <li data-reveal="1" style="padding: 30px 0 30px; border-top: 1px solid #d8cfc0;">
+        <p style="margin: 0 0 18px; font-family: Newsreader, Georgia, serif; font-size: 2.4rem; font-weight: 300; color: #b79a63; line-height: 1;">02</p>
+        <h3 style="margin: 0 0 10px; font-size: 1.05rem; font-weight: 500; letter-spacing: 0.01em;">Simplify</h3>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 30ch; text-wrap: pretty;">We identify unnecessary steps, bottlenecks and manual work.</p>
+      </li>
+      <li data-reveal="1" style="padding: 30px 0 30px; border-top: 1px solid #d8cfc0;">
+        <p style="margin: 0 0 18px; font-family: Newsreader, Georgia, serif; font-size: 2.4rem; font-weight: 300; color: #b79a63; line-height: 1;">03</p>
+        <h3 style="margin: 0 0 10px; font-size: 1.05rem; font-weight: 500; letter-spacing: 0.01em;">Automate</h3>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 30ch; text-wrap: pretty;">We implement practical improvements using the right tools.</p>
+      </li>
+      <li data-reveal="1" style="padding: 30px 0 30px; border-top: 1px solid #d8cfc0;">
+        <p style="margin: 0 0 18px; font-family: Newsreader, Georgia, serif; font-size: 2.4rem; font-weight: 300; color: #b79a63; line-height: 1;">04</p>
+        <h3 style="margin: 0 0 10px; font-size: 1.05rem; font-weight: 500; letter-spacing: 0.01em;">Improve</h3>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 30ch; text-wrap: pretty;">We measure, refine and build on what works.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="clients" style="border-top: 1px solid #e6dfd4;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 130px) clamp(20px, 5vw, 64px);">
+    <div style="display: grid; grid-template-columns: 1fr; gap: clamp(36px, 5vw, 80px);" data-two-col="1">
+      <div>
+        <h2 data-reveal="1" style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.08; letter-spacing: -0.02em; max-width: 20ch; text-wrap: balance;">Built for businesses that have outgrown manual work.</h2>
+      </div>
+      <div data-reveal="1">
+        <p style="margin: 0 0 30px; font-size: 1.02rem; line-height: 1.6; color: #55524c; max-width: 42ch; text-wrap: pretty;">We work across industries. What our clients have in common is operational complexity that has grown faster than their systems.</p>
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px;">
+          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Growing service businesses</li>
+          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Professional services</li>
+          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Agencies</li>
+          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Operations-heavy SMEs</li>
+          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Founder-led businesses</li>
+          <li style="border: 1px solid #ddd4c5; border-radius: 999px; padding: 9px 18px; font-size: 14.5px; color: #38352f;">Teams using multiple disconnected tools</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="border-top: 1px solid #e6dfd4;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 130px) clamp(20px, 5vw, 64px);">
+    <h2 data-reveal="1" style="margin: 0 0 clamp(40px, 5vw, 68px); font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.1; letter-spacing: -0.02em;">Why Equoren</h2>
+    <div style="display: grid; grid-template-columns: 1fr; gap: clamp(30px, 3.5vw, 48px);" data-principles="1">
+      <div data-reveal="1">
+        <h3 style="margin: 0 0 12px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-style: italic; font-size: clamp(1.3rem, 2vw, 1.6rem); letter-spacing: -0.01em;">Practical over theoretical.</h3>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 32ch; text-wrap: pretty;">We focus on improvements your team can actually use.</p>
+      </div>
+      <div data-reveal="1">
+        <h3 style="margin: 0 0 12px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-style: italic; font-size: clamp(1.3rem, 2vw, 1.6rem); letter-spacing: -0.01em;">Simple over complicated.</h3>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 32ch; text-wrap: pretty;">We don't add technology for the sake of technology.</p>
+      </div>
+      <div data-reveal="1">
+        <h3 style="margin: 0 0 12px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-style: italic; font-size: clamp(1.3rem, 2vw, 1.6rem); letter-spacing: -0.01em;">Built around your business.</h3>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 32ch; text-wrap: pretty;">Your existing processes and tools are the starting point.</p>
+      </div>
+      <div data-reveal="1">
+        <h3 style="margin: 0 0 12px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-style: italic; font-size: clamp(1.3rem, 2vw, 1.6rem); letter-spacing: -0.01em;">Designed to scale.</h3>
+        <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 32ch; text-wrap: pretty;">We build systems that can evolve as your business grows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: #1a1917; color: #f2efea;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(76px, 10vw, 140px) clamp(20px, 5vw, 64px); display: grid; grid-template-columns: 1fr; gap: clamp(32px, 5vw, 80px); align-items: center;" data-two-col="1">
+    <div>
+      <p style="margin: 0 0 22px; font-size: 12.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #b79a63;">Where to begin</p>
+      <h2 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.02; letter-spacing: -0.025em;">Start with one problem.</h2>
+    </div>
+    <div>
+      <p style="margin: 0 0 32px; font-size: clamp(1.02rem, 1.4vw, 1.15rem); line-height: 1.62; color: #c8c3ba; max-width: 46ch; text-wrap: pretty;">You don't need a major transformation project. We can start with one workflow, one bottleneck or one repetitive task and see what can be improved.</p>
+      <a href="#contact" style="display: inline-block; font-size: 15.5px; color: #1a1917; background: #f2efea; padding: 16px 34px; border-radius: 999px; transition: background 220ms ease, transform 220ms ease;" style-hover="background: #b79a63; transform: translateY(-1px);">Talk to us about a workflow</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 130px) clamp(20px, 5vw, 64px);">
+    <div style="display: grid; grid-template-columns: 1fr; gap: clamp(36px, 5vw, 80px);" data-two-col="1">
+      <div>
+        <h2 data-reveal="1" style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.1; letter-spacing: -0.02em;">About</h2>
+      </div>
+      <div data-reveal="1">
+        <p style="margin: 0 0 26px; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(1.35rem, 2.3vw, 1.9rem); line-height: 1.35; letter-spacing: -0.015em; max-width: 34ch; text-wrap: pretty;">Equoren is being built around a simple idea: good operations should make work easier, not harder.</p>
+        <p style="margin: 0 0 20px; font-size: 1.02rem; line-height: 1.65; color: #55524c; max-width: 46ch; text-wrap: pretty;">At the early stage, we work closely with each business to understand its processes, identify practical improvements and test what actually creates value.</p>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #8b8781; max-width: 46ch;">Equoren is currently in an early-stage market validation phase.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="border-top: 1px solid #e6dfd4;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 130px) clamp(20px, 5vw, 64px);">
+    <div style="display: grid; grid-template-columns: 1fr; gap: clamp(44px, 5vw, 84px);" data-two-col="1">
+      <div>
+        <h2 data-reveal="1" style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 300; font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.08; letter-spacing: -0.02em; max-width: 20ch; text-wrap: balance;">Have a workflow that shouldn't be this complicated?</h2>
+        <p data-reveal="1" style="margin: 26px 0 0; font-size: 1.02rem; line-height: 1.62; color: #55524c; max-width: 40ch; text-wrap: pretty;">Tell us what you're trying to improve. We'll take a look and see whether we can help.</p>
+        <p data-reveal="1" style="margin: 34px 0 0; font-size: 14.5px; color: #8b8781;">Or email us directly<br /><a href="mailto:hello@equoren.com" style="font-size: 1.05rem; color: #1a1917; border-bottom: 1px solid #c9bda8;" style-hover="color: #7f6130; border-color: #7f6130;">hello@equoren.com</a></p>
+      </div>
+      <div>
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div role="status" style="border: 1px solid #ddd4c5; background: #f5f1ea; padding: clamp(28px, 4vw, 44px);">
+            <h3 style="margin: 0 0 12px; font-family: Newsreader, Georgia, serif; font-weight: 400; font-size: 1.5rem;">Thank you.</h3>
+            <p style="margin: 0; font-size: 1rem; line-height: 1.6; color: #55524c; max-width: 40ch;">{{ sentNote }}</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submit }}" noValidate="{{ true }}" style="display: grid; grid-template-columns: 1fr; gap: 22px;">
+          <div style="display: grid; gap: 8px;">
+            <label for="eq-name" style="font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8b8781;">Name</label>
+            <input id="eq-name" name="name" type="text" required="{{ true }}" autoComplete="name" style="background: transparent; border: 0; border-bottom: 1px solid #d8cfc0; padding: 10px 0; font-size: 1rem; border-radius: 0;" style-focus="border-color: #7f6130; outline: none;" />
+          </div>
+          <div style="display: grid; gap: 8px;">
+            <label for="eq-email" style="font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8b8781;">Work email</label>
+            <input id="eq-email" name="email" type="email" required="{{ true }}" autoComplete="email" style="background: transparent; border: 0; border-bottom: 1px solid #d8cfc0; padding: 10px 0; font-size: 1rem; border-radius: 0;" style-focus="border-color: #7f6130; outline: none;" />
+          </div>
+          <div style="display: grid; gap: 8px;">
+            <label for="eq-company" style="font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8b8781;">Company</label>
+            <input id="eq-company" name="company" type="text" autoComplete="organization" style="background: transparent; border: 0; border-bottom: 1px solid #d8cfc0; padding: 10px 0; font-size: 1rem; border-radius: 0;" style-focus="border-color: #7f6130; outline: none;" />
+          </div>
+          <div style="display: grid; gap: 8px;">
+            <label for="eq-improve" style="font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8b8781;">What would you like to improve?</label>
+            <input id="eq-improve" name="improve" type="text" required="{{ true }}" placeholder="e.g. client onboarding, invoicing, reporting" style="background: transparent; border: 0; border-bottom: 1px solid #d8cfc0; padding: 10px 0; font-size: 1rem; border-radius: 0;" style-focus="border-color: #7f6130; outline: none;" />
+          </div>
+          <div style="display: grid; gap: 8px;">
+            <label for="eq-message" style="font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8b8781;">Message <span style="text-transform: none; letter-spacing: 0; color: #a8a39b;">(optional)</span></label>
+            <textarea id="eq-message" name="message" rows="4" style="background: transparent; border: 1px solid #d8cfc0; padding: 12px; font-size: 1rem; resize: vertical; border-radius: 0;" style-focus="border-color: #7f6130; outline: none;"></textarea>
+          </div>
+          <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+            <p role="alert" style="margin: 0; font-size: 14.5px; color: #8c3b23;">{{ error }}</p>
+          </sc-if>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 6px;">
+            <button type="submit" style="font-size: 15.5px; color: #faf8f5; background: #1a1917; padding: 16px 34px; border: 0; border-radius: 999px; cursor: pointer; transition: background 220ms ease;" style-hover="background: #7f6130;">Send inquiry</button>
+            <span style="font-size: 13px; color: #a8a39b;">{{ formModeNote }}</span>
+          </div>
+        </form>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer style="background: #1a1917; color: #c8c3ba;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: clamp(56px, 7vw, 90px) clamp(20px, 5vw, 64px) 40px;">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 40px; justify-content: space-between;" data-footer="1">
+      <div>
+        <p style="margin: 0 0 14px; font-weight: 500; font-size: 15px; letter-spacing: 0.22em; color: #f2efea;">EQUOREN</p>
+        <p style="margin: 0 0 10px; font-size: 14.5px; color: #8b8781;">Operations &amp; Automation</p>
+        <p style="margin: 0; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 1.15rem; color: #c8c3ba;">Better ways of working.</p>
+      </div>
+      <nav aria-label="Footer" style="display: flex; flex-direction: column; gap: 12px;">
+        <a href="#services" style="font-size: 14.5px; color: #c8c3ba;" style-hover="color: #f2efea;">Services</a>
+        <a href="#process" style="font-size: 14.5px; color: #c8c3ba;" style-hover="color: #f2efea;">How we work</a>
+        <a href="#contact" style="font-size: 14.5px; color: #c8c3ba;" style-hover="color: #f2efea;">Contact</a>
+        <a href="mailto:hello@equoren.com" style="font-size: 14.5px; color: #c8c3ba;" style-hover="color: #f2efea;">hello@equoren.com</a>
+      </nav>
+    </div>
+    <div style="margin-top: clamp(48px, 6vw, 76px); padding-top: 22px; border-top: 1px solid #302d29; display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between;">
+      <p style="margin: 0; font-size: 13px; color: #6f6b65;">Equoren is currently in an early-stage market validation phase.</p>
+      <p style="margin: 0; font-size: 13px; color: #6f6b65;">© 2026 Equoren</p>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;formEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Form configuration&quot;},&quot;contactEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;hello@equoren.com&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Form configuration&quot;},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  state = { navOpen: false, sent: false, error: "", sentNote: "" };
+
+  componentDidMount() {
+    this.applyResponsive();
+    this._onResize = () => this.applyResponsive();
+    window.addEventListener("resize", this._onResize);
+    if (this.props.revealOnScroll !== false) this.setupReveal();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this._onResize);
+    if (this._io) this._io.disconnect();
+  }
+
+  componentDidUpdate() { this.applyResponsive(); }
+
+  // Media-query behaviour without stylesheets: inline styles are set from JS.
+  applyResponsive() {
+    const w = window.innerWidth;
+    const desk = w >= 900;
+    document.querySelectorAll("[data-navlink]").forEach(el => { el.style.display = desk ? "inline" : "none"; });
+    document.querySelectorAll("[data-navcta]").forEach(el => { el.style.display = desk ? "inline-block" : "none"; });
+    document.querySelectorAll("[data-navbtn]").forEach(el => { el.style.display = desk ? "none" : "inline-flex"; });
+    document.querySelectorAll("[data-two-col]").forEach(el => { el.style.gridTemplateColumns = desk ? "minmax(0, 1fr) minmax(0, 1fr)" : "1fr"; });
+    document.querySelectorAll("[data-hero-grid]").forEach(el => { el.style.gridTemplateColumns = desk ? "minmax(0, 1fr) auto" : "1fr"; });
+    document.querySelectorAll("[data-cards]").forEach(el => { el.style.gridTemplateColumns = w >= 760 ? "repeat(2, minmax(0, 1fr))" : "1fr"; });
+    document.querySelectorAll("[data-steps]").forEach(el => { el.style.gridTemplateColumns = w >= 900 ? "repeat(4, minmax(0, 1fr))" : w >= 560 ? "repeat(2, minmax(0, 1fr))" : "1fr"; el.style.columnGap = w >= 560 ? "clamp(20px, 3vw, 44px)" : "0"; });
+    document.querySelectorAll("[data-principles]").forEach(el => { el.style.gridTemplateColumns = w >= 900 ? "repeat(4, minmax(0, 1fr))" : w >= 560 ? "repeat(2, minmax(0, 1fr))" : "1fr"; });
+    document.querySelectorAll("[data-footer]").forEach(el => { el.style.gridTemplateColumns = desk ? "minmax(0, 1fr) auto" : "1fr"; });
+    if (desk && this.state.navOpen) this.setState({ navOpen: false });
+  }
+
+  setupReveal() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const els = Array.from(document.querySelectorAll("[data-reveal]"));
+    if (!els.length || !("IntersectionObserver" in window)) return;
+    els.forEach(el => {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(14px)";
+      el.style.transition = "opacity 700ms cubic-bezier(.22,.61,.36,1), transform 700ms cubic-bezier(.22,.61,.36,1)";
+    });
+    this._io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.style.opacity = "1";
+        e.target.style.transform = "none";
+        this._io.unobserve(e.target);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    els.forEach(el => this._io.observe(el));
+  }
+
+  submit = (ev) => {
+    ev.preventDefault();
+    const form = ev.currentTarget;
+    const d = Object.fromEntries(new FormData(form).entries());
+    if (!d.name || !d.name.trim()) return this.setState({ error: "Please add your name." });
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test((d.email || "").trim())) return this.setState({ error: "Please add a valid work email." });
+    if (!d.improve || !d.improve.trim()) return this.setState({ error: "Please tell us what you'd like to improve." });
+
+    const endpoint = (this.props.formEndpoint || "").trim();
+    const email = this.props.contactEmail || "hello@equoren.com";
+
+    if (endpoint) {
+      this.setState({ error: "" });
+      fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(d)
+      })
+        .then(r => {
+          if (!r.ok) throw new Error("bad status");
+          this.setState({ sent: true, error: "", sentNote: "We've received your inquiry and will reply to " + d.email + "." });
+        })
+        .catch(() => this.setState({ error: "That didn't send. Please email " + email + " directly." }));
+      return;
+    }
+
+    // No endpoint configured yet: hand the inquiry to the visitor's mail client
+    // rather than posting to a placeholder URL.
+    const body = [
+      "Name: " + d.name,
+      "Work email: " + d.email,
+      "Company: " + (d.company || "—"),
+      "Would like to improve: " + d.improve,
+      "",
+      d.message || ""
+    ].join("\n");
+    window.location.href = "mailto:" + email +
+      "?subject=" + encodeURIComponent("Inquiry from " + d.name + (d.company ? " (" + d.company + ")" : "")) +
+      "&body=" + encodeURIComponent(body);
+    this.setState({ sent: true, error: "", sentNote: "Your email client should now be open with your inquiry ready to send. If nothing happened, write to " + email + "." });
+  };
+
+  toggleNav = () => this.setState(s => ({ navOpen: !s.navOpen }));
+  closeNav = () => this.setState({ navOpen: false });
+
+  renderVals() {
+    return {
+      navOpen: this.state.navOpen,
+      navOpenStr: this.state.navOpen ? "true" : "false",
+      toggleNav: this.toggleNav,
+      closeNav: this.closeNav,
+      submit: this.submit,
+      sent: this.state.sent,
+      showForm: !this.state.sent,
+      sentNote: this.state.sentNote,
+      error: this.state.error,
+      formModeNote: (this.props.formEndpoint || "").trim() ? "" : "Opens in your email client."
+    };
+  }
+}
+</script>
+</body>
+</html>
