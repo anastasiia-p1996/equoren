@@ -317,7 +317,7 @@
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;formEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Form configuration&quot;},&quot;contactEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;hello@equoren.com&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Form configuration&quot;},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;formEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://api.web3forms.com/submit&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Form configuration&quot;},&quot;formAccessKey&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;1be6b789-4f1e-400d-bdc7-786569e37802&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Form configuration&quot;},&quot;contactEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;hello@equoren.com&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Form configuration&quot;},&quot;revealOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
 class Component extends DCLogic {
   state = { navOpen: false, sent: false, error: "", sentNote: "" };
 
@@ -379,7 +379,7 @@ class Component extends DCLogic {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test((d.email || "").trim())) return this.setState({ error: "Please add a valid work email." });
     if (!d.improve || !d.improve.trim()) return this.setState({ error: "Please tell us what you'd like to improve." });
 
-    const endpoint = (this.props.formEndpoint || "").trim();
+    const endpoint = (this.props.formEndpoint || "https://api.web3forms.com/submit").trim();
     const email = this.props.contactEmail || "hello@equoren.com";
 
     if (endpoint) {
@@ -387,11 +387,15 @@ class Component extends DCLogic {
       fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(d)
+          body: JSON.stringify(Object.assign({}, d, {
+          access_key: this.props.formAccessKey || "1be6b789-4f1e-400d-bdc7-786569e37802",
+          subject: "Equoren inquiry — " + d.name + (d.company ? " (" + d.company + ")" : ""),
+          from_name: "Equoren website"
+        }))
       })
         .then(r => {
           if (!r.ok) throw new Error("bad status");
-          this.setState({ sent: true, error: "", sentNote: "We've received your inquiry and will reply to " + d.email + "." });
+          this.setState({ sent: true, error: "", sentNote: "We've received your inquiry and will get back to you at " + d.email + "." });
         })
         .catch(() => this.setState({ error: "That didn't send. Please email " + email + " directly." }));
       return;
@@ -427,7 +431,7 @@ class Component extends DCLogic {
       showForm: !this.state.sent,
       sentNote: this.state.sentNote,
       error: this.state.error,
-      formModeNote: (this.props.formEndpoint || "").trim() ? "" : "Opens in your email client."
+      formModeNote: ""
     };
   }
 }
